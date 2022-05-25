@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    @yield('titolo')
     <div class="container">
         <div class="row">
             @yield('cont')

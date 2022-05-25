@@ -1,4 +1,12 @@
 @extends('layout.layout')
+
+
+@section('titolo')
+    <h1 class="text-center py-5">Film Disponibili</h1>
+@endsection
+
+
+
 @section('cont')
 
 @foreach ($movies as $key => $movie)
