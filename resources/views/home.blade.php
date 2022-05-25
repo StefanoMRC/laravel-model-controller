@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1 class="text-center">ciao</h1>
+@extends('layout.layout')
+@section('cont')
 
-    <script src=" {{ asset('js/app.js') }} "></script>
-</body>
-</html>
+@foreach ($movies as $key => $movie)
+<div class="card mx-2 my-2" style="width: 18rem;">
+    <div class="card-body">
+      <h3 class="card-title">{{$movie -> title}}</h3>
+      <h6 class="card-title">Titolo originale:{{$movie -> title}}</h6>
+      <h6 class="card-title">Nazionalità:{{$movie -> nationality}}</h6>
+      <h6 class="card-title">Data uscita:{{$movie -> date}}</h6>
+      <h6 class="card-title">Votazione:{{$movie -> vote}}</h6>
+      <a href="#" class="btn btn-primary">Maggiori info</a>
+    </div>
+</div> 
+@endforeach
+@endsection
